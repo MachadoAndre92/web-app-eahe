@@ -26,7 +26,7 @@ export default function Config() {
   return (
     <div  className="rounded overflow-hidden shadow-lg">
       
-      <p className="font-bold text-xl mb-2">Configs</p>
+      <p className="font-bold text-xl mb-2 px-6 py-4">Configs</p>
       <div className="px-6 py-4 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
         <label className="text-gray-700" htmlFor="Zonas">
             <p className="text-gray-700 text-base font-bold">Zonas</p>
