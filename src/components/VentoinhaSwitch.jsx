@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 
 export default function VentoinhaSwitch(props) {
     const [checked, setChecked] = useState(props.mode);
+    const [value, setValue] = useState(props.velocidade);
     
     
 
@@ -11,16 +12,29 @@ export default function VentoinhaSwitch(props) {
         console.log('checked = ', checked);
         setChecked(!checked); 
         if(checked){
-            updateData(0);
+            updateData(0,value);
         }else{
-            updateData(1);
+            updateData(1,value);
         }
       }; 
 
-      const updateData = async (x) => {
+      const barChange = (event) => {
+        
+        setValue(event.target.value);
+        console.log(event.target.value);
+        if(checked){
+            updateData(0,event.target.value);
+        }else{
+            updateData(1,event.target.value);
+        }
+        
+        };
+
+      const updateData = async (x, y) => {
         try {
             const updatedData = {
-                mode: x
+                mode: x,
+                velocidade: y
             };
             const response = await axios.put('http://localhost:8000/api/ventoinhas/'+props.id, updatedData);
             console.log(response.data);
@@ -40,7 +54,10 @@ export default function VentoinhaSwitch(props) {
             <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" ></div>
             <span className="ml-3 text-gray-900 text-sm font-medium">{checked ? 'Ventoinha Ligada' : 'Ventoinha Desligada'}</span>
             </label>
+            <label hmtlfor="VentoinhaVelocidade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Velocidade: {value}</label>
+            <input id="VentoinhaVelocidade" type="range" defaultValue={value} onClick={barChange} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"></input>
         </div>
+        
     </div>
   )
 }

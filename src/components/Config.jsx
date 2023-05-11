@@ -25,10 +25,14 @@ export default function Config() {
       
       <p className="font-bold text-xl mb-2 px-6 py-4">Configs</p>
       {ventoinhas.map((item) => (
-          <><p className="text-gray-700 text-base font-bold px-6">{item.name}</p>
-          <VentoinhaSwitch key={item.id} id={item.id} mode={item.mode} /></>
+          <div key={item.id}>
+              <p className="text-gray-700 text-base font-bold px-6">{item.name}</p>
+            <VentoinhaSwitch  id={item.id} mode={item.mode} velocidade={item.velocidade}/>
+          </div>
 
         ))}
+
+        
             
     </div>
     
