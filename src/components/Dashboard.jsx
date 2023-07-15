@@ -15,7 +15,7 @@ export default function Dashboard() {
     const [leituras, setLeituras] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/leituras')
+        axios.get('http://13.53.73.223/api/leituras')
         .then(response => {
             console.log(response.data);
             setLeituras(response.data);
@@ -31,8 +31,9 @@ export default function Dashboard() {
       
     <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
       
-        {leituras.map((item) => (
-          <Leitura key={item.id} name={item.zona.name} temp={item.temp} hum={item.hum} ar={item.zona.conduta_ar} id_zona={item.zona_id}/>
+    {leituras.map((item) => (
+        <Leitura key={item.id} name={item.zona.name} temp={item.temp} hum={item.hum} ar={item.zona.conduta_ar} id_zona={item.zona_id}/>
+          
         ))}
        
       </div>

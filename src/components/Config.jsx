@@ -9,7 +9,7 @@ export default function Config() {
   const [ventoinhas, setVentoinhas] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/ventoinhas')
+        axios.get('http://13.53.73.223/api/ventoinhas')
         .then(response => {
             console.log("Config Fetch:", response.data);
             setVentoinhas(response.data);

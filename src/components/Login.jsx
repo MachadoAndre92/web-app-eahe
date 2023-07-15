@@ -23,7 +23,7 @@ export default function Login() {
         const email = e.target.email.value;
         console.log(password, email);
 
-        axios.post('http://localhost:8000/api/login', {
+        axios.post('http://13.53.73.223/api/login', {
             email: email,
             password: password,
         }).then((res) => { 

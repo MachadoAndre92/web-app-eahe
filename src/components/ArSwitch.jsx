@@ -25,7 +25,7 @@ export default function ToggleSwitch(props) {
             const updatedData = {
                 conduta_ar: x
             };
-            const response = await axios.put('http://localhost:8000/api/zonas/'+props.id_zona+'/ar', updatedData);
+            const response = await axios.put('http://13.53.73.223/api/zonas/'+props.id_zona+'/ar', updatedData);
             console.log(response.data);
             // Fetch data again to reflect the changes
             //fetchData();

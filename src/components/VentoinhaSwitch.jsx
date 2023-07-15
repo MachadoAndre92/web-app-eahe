@@ -36,7 +36,7 @@ export default function VentoinhaSwitch(props) {
                 mode: x,
                 velocidade: y
             };
-            const response = await axios.put('http://localhost:8000/api/ventoinhas/'+props.id, updatedData);
+            const response = await axios.put('http://13.53.73.223/api/ventoinhas/'+props.id, updatedData);
             console.log(response.data);
             // Fetch data again to reflect the changes
             //fetchData();
