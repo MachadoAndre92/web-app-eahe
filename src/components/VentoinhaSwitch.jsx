@@ -23,9 +23,9 @@ export default function VentoinhaSwitch(props) {
         setValue(event.target.value);
         console.log(event.target.value);
         if(checked){
-            updateData(0,event.target.value);
-        }else{
             updateData(1,event.target.value);
+        }else{
+            updateData(0,event.target.value);
         }
         
         };

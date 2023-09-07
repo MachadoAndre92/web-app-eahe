@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 // Import the image you want to use
-import backgroundImage from './img/house.jpg'; // Replace with the actual path to your image
+import backgroundImage from './img/imagem1.png'; // Replace with the actual path to your image
 
 export default function Login() {
   const [errors, setErrors] = useState([]);
@@ -57,7 +57,7 @@ export default function Login() {
               </p>
               <form onSubmit={handleLogin} className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                 <div className="relative">
-                  <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
+                  <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute rounded-md">
                     Email
                   </p>
                   <input
@@ -71,7 +71,7 @@ export default function Login() {
                         </span>
                 </div>
                 <div className="relative">
-                  <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">
+                  <p className="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute rounded-md">
                     Password
                   </p>
                   <input
