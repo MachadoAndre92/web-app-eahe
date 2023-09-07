@@ -37,7 +37,7 @@ export default function ToggleSwitch(props) {
 
   return (
     
-    <div className="px-6 py-4">
+    <div className="px-6 py-0.5">
         
         <label htmlFor={props.name} className="flex items-center cursor-pointer relative mb-4">
         <input type="checkbox" id={props.name} className="sr-only" onChange={handleChange} checked={checked} />

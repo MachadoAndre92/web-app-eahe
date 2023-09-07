@@ -1,5 +1,6 @@
 import React from 'react'
 import ArSwitch from './ArSwitch'
+import TemperatureConfig from './TemperatureConfig'
 
 
 
@@ -23,9 +24,8 @@ export default function Leitura(props) {
 
         <div className="px-2 ">          
             <ArSwitch key={props.id} ar={props.ar} id_zona={props.id_zona} name={props.name}/>
+            <TemperatureConfig key={props.id} zonaId={props.id_zona}/>
         </div>
-        
-        
         
             
     </div>

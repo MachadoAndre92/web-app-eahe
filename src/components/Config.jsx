@@ -27,7 +27,7 @@ export default function Config() {
       {ventoinhas.map((item) => (
           <div key={item.id}>
               <p className="text-gray-700 text-base font-bold px-6">{item.name}</p>
-            <VentoinhaSwitch  id={item.id} mode={item.mode} velocidade={item.velocidade}/>
+            <VentoinhaSwitch  id={item.id} mode={item.mode} velocidade={item.velocidade} fluxo_ar={item.fluxo_ar}/>
           </div>
 
         ))}

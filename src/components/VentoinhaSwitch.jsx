@@ -48,13 +48,16 @@ export default function VentoinhaSwitch(props) {
 
   return (
     <div>
-        <div className="px-6 py-4">        
+        
+        <div className="px-6 py-4">  
+            <span className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fluxo de ar: {props.fluxo_ar} m/s</span>      
             <label htmlFor="1" className="flex items-center cursor-pointer relative mb-4">
             <input type="checkbox" id="1" className="sr-only" onChange={handleChange} checked={checked} />
             <div className="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full" ></div>
-            <span className="ml-3 text-gray-900 text-sm font-medium">{checked ? 'Ventoinha Ligada' : 'Ventoinha Desligada'}</span>
+            
+            <span className="ml-3 text-gray-900 text-sm font-medium">{checked ? 'Modo Automático' : 'Ventoinha Manual'}</span>
             </label>
-            <label hmtlfor="VentoinhaVelocidade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Velocidade: {value}</label>
+            <label hmtlfor="VentoinhaVelocidade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Velocidade: {value} m/s</label>
             <input id="VentoinhaVelocidade" type="range" defaultValue={value} onClick={barChange} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"></input>
         </div>
         
